@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.0.31"
+                id="HRAppModule_EmployeesVOResources" Package="com.cts.osp.model.rest.v1" usageMode="RESTClient">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="EmployeesVO1" RangeSize="5" DataControl="HRAppModuleDataControl" id="EmployeesVO1Iter"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="EmployeesVO1Iter" id="EmployeesRS" AccessorFolder="Always">
+      <nodeDefinition DefName="com.cts.osp.model.EmployeesVO" Name="com.cts.osp.model.EmployeesVO"
+                      DiscrName="_Sys_Accessor"/>
+    </tree>
+    <tree IterBinding="EmployeesVO1Iter" id="Employees" AccessorFolder="Always">
+      <nodeDefinition DefName="com.cts.osp.model.EmployeesVO" Name="com.cts.osp.model.EmployeesVO"/>
+    </tree>
+  </bindings>
+</pageDefinition>
